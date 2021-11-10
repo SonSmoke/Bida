@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Untitled Document</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/fontawesome/fontawesome-pro-5.14.0-web/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link href="css/Style.css" rel="stylesheet" type="text/css" />
+
+    <!--  Bootstrap's JavaScript  -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap-4.3.1.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#mobilenavi").hide();
+            $("#blackscreen").hide();
+            $("#bgmobilesearch").hide();
+
+            $("#icon3lines").click(function() {
+                $("#mobilenavi").slideToggle();
+                $("#blackscreen").fadeToggle();
+            });
+            $("#blackscreen").click(function() {
+                $("#mobilenavi,#bgmobilesearch").slideUp();
+                $(this).fadeOut();
+            });
+            $("icons").click(function() {
+                $("#bgmobilesearch").slideToggle();
+                $("blackscreen").fadeToggle();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- BLACK SCREEN  -->
+    <div class="container-fluid d-md-none" id="blackscreen"></div>
+    <!--container-fluid-->
+
+    <!--HEADER-->
+
+    <div class="container-fluid" id="bgheader">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4" id="hotline">
+                    <ul>
+                        <li><a href="">Đường dây nóng: 19006060</a></li>
+                    </ul>
+                </div>
+                <!-- hotline -->
+                <div class="col-xl-6" id="searchbox">
+                    <form action="" method="POST">
+                        <input type="text" placeholder="Nhập từ khoá..." id="searchfill" />
+                        <button id="searchicon"><i class="far fa-search"></i></button>
+                    </form>
+                </div>
+                <!--searchbox-->
+                <div class="col-xl-2" id="signinup">
+                    <ul>
+                        <li>
+                            <a href=""><i class="fas fa-user"></i></a>
+                        </li>
+
+                        <li>
+                            <a href="">Trợ giúp</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Signinup -->
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!-- container-fluid -->
+
+    <!--Navi-->
+    <div class="container-fluid" id="bgnavi">
+        <div class="container">
+            <div class="row">
+                <div class="d-md-none col-sm-2 col-2" id="iconhamburger">
+                    <i class="fas fa-bars" id="iconhamburger"></i>
+                </div>
+                <!--iconhamburger-->
+                <div class="col-xl-2" id="logo">
+                    <a href=""><img src="img/Logo.png" alt="Logo" /></a>
+                </div>
+                <!--logo-->
+
+                <div class="col-xl-8">
+                    <ul id="nav">
+                        <li><a href="#home">Trang chủ</a></li>
+                        <li>
+                            <a href="#product">Sản phẩm <i class="fa fa-caret-down"></i></a>
+
+                            <ul class="subnav">
+                                <li><a href="#">Bàn</a></li>
+                                <li><a href="#">Cơ</a></li>
+                                <li><a href="#">Phụ kiện</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#service">Dịch vụ</a></li>
+                        <li><a href="#Chính sách">Chính sách</a></li>
+                        <li><a href="#Liên hệ">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <!--nav-->
+                <div class="col-xl-2 navicon">
+                    <ul>
+                        <li>
+                            <a href=""><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="far fa-heart"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!--love&shop-->
+            </div>
+            <!--row-->
+        </div>
+        <!--container-->
+    </div>
+    <!--bgnavi-->
+
+    <!-- MOBILE NAVI  -->
+    <div class="container-fluid d-md-none" id="bgmobilenavi">
+        <div class="row">
+            <div class="col-12 col-sm-12" id="mobilenavi">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Sản Phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Dịch Vụ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Chính Sách</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Liên Hệ</a>
+                    </li>
+                </ul>
+            </div>
+            <!--mobilenavi-->
+        </div>
+        <!--row-->
+    </div>
+    <!--bgmobilenavi-->
+
+    <!--MOBILE SEARCH-->
+    <div class="container-fluid d-md-none" id="bgmobilesearch">
+        <div class="row">
+            <div class="col-12 col-sm-12" id="mobilesearch">
+                <form action="" method="post">
+                    <input type="text" placeholder="Nhập từ khóa..." id="mobilesearchfill" />
+                    <button id="mobilesearchicon">
+              <i class="fas fa-search"></i>
+            </button>
+                </form>
+            </div>
+            <!--mobilesearch-->
+        </div>
+        <!--row-->
+    </div>
+    <!--container-fluid-->
+
+    <!-- BANNER -->
+
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="./img/banner 2.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides">
+            <img src="./img/banner 3.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides">
+            <img src="./img/banner4.jpg" style="width: 100%" />
+        </div>
+    </div>
+
+    <!-- PRODUCT -->
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-12 heading">
+                <h2>Sản phẩm bán chạy</h2>
+                <hr />
+            </div>
+        </div>
+        <!--row-->
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="slidess">
+                    <div class="img2">
+                        <a href="">
+                            <img src="./img/predator-urbain-hard-pool-cue-case-3x5-brown-thumb-1000x1000_1.jpg" class="img-thumbnail imgbox1" /></a>
+                        <h6>Bao Predator vỏ cứng</h6>
+                        <h5>5.037.000VND</h5>
+                        <div class="button">
+                            <a href="" class="shopping"><i class="fas fa-shopping-cart"></i
+                ></a>
+                            <a href="" class="seemore"><i class="fad fa-eye"></i></a>
+                        </div>
+                        <!--button-->
+                    </div>
+                    <!--img2-->
+                </div>
+            </div>
+
+            <div class="col-xl-4">
+                <div class="slidess">
+                    <div class="img2">
+                        <a href=""><img src="./img/ep34.png" class="img-thumbnail imgbox1" /></a>
+                        <h6>Cơ ELITE lén lút</h6>
+                        <h5>2.360.000VND</h5>
+                        <div class="button">
+                            <a href="" class="shopping"><i class="fas fa-shopping-cart"></i
+                ></a>
+                            <a href="" class="seemore"><i class="fad fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4">
+                <div class="slidess">
+                    <div class="img2">
+                        <a href=""><img src="./img/ozonepark_2464_437264158__15064.1.jpg" class="img-thumbnail imgbox1" /></a>
+                        <h6>Cơ ACTION Cá Heo</h6>
+                        <h5>1.850.000VND</h5>
+                        <div class="button">
+                            <a href="" class="shopping"><i class="fas fa-shopping-cart"></i
+                ></a>
+                            <a href="" class="seemore"><i class="fad fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4">
+                <div class="slidess">
+                    <div class="img2">
+                        <a href=""><img src="./img/ozonepark_2464_488675469__57382.1.jpg" class="img-thumbnail imgbox1" /></a>
+                        <h6>Cơ OUTLAW OL33</h6>
+                        <h5>1.200.000VND</h5>
+                        <div class="button">
+                            <a href="" class="shopping"><i class="fas fa-shopping-cart"></i
+                ></a>
+                            <a href="" class="seemore"><i class="fad fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--row-->
+        <div class="col-xl-12 box-center">
+            <a href="">
+                <h6>Xem thêm</h6>
+            </a>
+        </div>
+        <!--box-center-->
+        <!--Xem thêm-->
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-12 heading">
+                <h2>Sản phẩm mới</h2>
+                <hr />
+            </div>
+        </div>
+        <!--row-->
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="slidess">
+                    <div class="img2">
+                        <a href="">
+                            <img src="./img/gangkamui.jpg" class="img-thumbnail imgbox1" /></a>
+                        <h6>Găng Kamui</h6>
+                        <h5>300.000VND</h5>
+                        <div class="button">
+                            <a href="" class="shopping"><i class="fas fa-shopping-cart"></i
+                ></a>
+                            <a href="" class="seemore"><i class="fad fa-eye"></i></a>
+                        </div>
+                        <!--button-->
+                    </div>
+                    <!--img2-->
+                </div>
+            </div>
+
+            <div class="col-xl-4">
+                <div class="slidess">
+                    <div class="img2">
+                        <a href=""><img src="./img/coschon.jpg" class="img-thumbnail imgbox1" /></a>
+                        <h6>Cơ SCHON LTD3</h6>
+                        <h5>2.360.000VND</h5>
+                        <div class="button">
+                            <a href="" class="shopping"><i class="fas fa-shopping-cart"></i
+                ></a>
+                            <a href="" class="seemore"><i class="fad fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4">
+                <div class="slidess">
+                    <div class="img2">
+                        <a href=""><img src="./img/ozonepark_2465_841953638__07432.1.jpg" class="img-thumbnail imgbox1" /></a>
+                        <h6>Đầu Cơ Predator</h6>
+                        <h5>1.850.000VND</h5>
+                        <div class="button">
+                            <a href="" class="shopping"><i class="fas fa-shopping-cart"></i
+                ></a>
+                            <a href="" class="seemore"><i class="fad fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4">
+                <div class="slidess">
+                    <div class="img2">
+                        <a href=""><img src="./img/poolpredator2.jpg" class="img-thumbnail imgbox1" /></a>
+                        <h6>Bộ bi Predator Acros II</h6>
+                        <h5>1.200.000VND</h5>
+                        <div class="button">
+                            <a href="" class="shopping"><i class="fas fa-shopping-cart"></i
+                ></a>
+                            <a href="" class="seemore"><i class="fad fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--row-->
+        <div class="col-xl-12 box-center">
+            <a href="">
+                <h6>Xem thêm</h6>
+            </a>
+        </div>
+        <!--box-center-->
+        <!--Xem thêm-->
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-12 heading">
+                <h2>Các Hãng</h2>
+                <hr />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-3 bigboss">
+                <img src="./img/action-logo.jpg" alt="actionlogo" />
+            </div>
+            <div class="col-xl-3 bigboss">
+                <img src="./img/athena.jpg" alt="athenalogo" />
+            </div>
+            <div class="col-xl-3 bigboss">
+                <img src="./img/Elite.jpg" alt="elitelogo" />
+            </div>
+            <div class="col-xl-3 bigboss">
+                <img src="./img/Kamui.jpg" alt="kamuilogo" />
+            </div>
+            <div class="col-xl-3 bigboss">
+                <img src="./img/outlaw-1.jpg" alt="outlawlogo" />
+            </div>
+            <div class="col-xl-3 bigboss">
+                <img src="./img/players-hxt.jpg" alt="playershxtlogo" />
+            </div>
+        </div>
+    </div>
+
+    <!--container-->
+
+    <!-- TOTOP  -->
+
+    <a href="" id="totop"><i class="fal fa-chevron-circle-up"></i></a>
+
+    <!-- FOOTER  -->
+    <div class="container-fluid" id="bgfooter1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 info">
+                    <img src="./img/Logo2.png" class="logo1" />
+                    <p>278 Hòa Bình, Hiệp Tân, Tân Phú, Tp. Hồ Chí Minh.</p>
+                    <p>Botterhelper@gmail.com</p>
+                    <p>19006060</p>
+                    <h4>Nhận thông báo mới nhất:</h4>
+                    <form action="" method="POST">
+                        <input type="text" placeholder="Nhập email..." id="emailfill" />
+                        <button id="email">ĐĂNG KÝ</button>
+                    </form>
+                </div>
+
+                <div class="col-xl-3 offset-xl-1 info">
+                    <h4>Trợ giúp</h4>
+                    <ul>
+                        <li><a href="">Tình trạng đặt hàng</a></li>
+                        <li><a href="">Phương thức vận chuyển</a></li>
+                        <li><a href="">Thanh toán</a></li>
+                        <li><a href="">Chính sách hoàn trả</a></li>
+                        <li><a href="">Chính sách bảo hành</a></li>
+                        <li><a href="">Khách hàng thân thiết</a></li>
+                        <li><a href="">Liên hệ chúng tôi</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xl-4 info">
+                    <h4>Về chúng tôi</h4>
+                    <ul>
+                        <li><a href="">Hệ thống cửa hàng</a></li>
+                        <li><a href="">Tin tức</a></li>
+                        <li><a href="">Tuyển dụng</a></li>
+                    </ul>
+                    <h4>Liên kết mạng xã hội:</h4>
+                    <ul id="social">
+                        <li>
+                            <a href=""><i class="fab fa-facebook-square"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-instagram-square"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                    <h4>Phương thức thanh toán:</h4>
+                    <ul id="payment">
+                        <li>
+                            <a href=""><i class="fab fa-cc-visa"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-cc-mastercard"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-cc-jcb"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-cc-paypal"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER2 -->
+    <div class="container-fluid" id="bgfooter2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12" id="copyright">
+                    <ul>
+                        <li>&copy; Copyright Botter. Design by Son.</li>
+                    </ul>
+                </div>
+                <!--copyright-->
+            </div>
+            <!--row-->
+        </div>
+        <!-- container-->
+    </div>
+    <!--bgfooter2-->
+
+    <!-- JAVASCRIPT -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./js/slider.js"></script>
+</body>
+
+</html>

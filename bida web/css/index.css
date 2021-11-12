@@ -1,0 +1,978 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+/* =========Font=========== */
+
+@font-face {
+    font-family: myheading;
+    src: url(../font/UVNSachVo_B.eot), url(../font/UVNSachVo_B.TTF), url(../font/UVNSachVo_B.woff);
+}
+
+@font-face {
+    font-family: mybody;
+    src: url(../font/NOTOSANSDISPLAY-MEDIUM.eot), url(../font/NotoSansDisplay-Medium.ttf), url(../font/NOTOSANSDISPLAY-MEDIUM.woff);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: myheading;
+}
+
+body {
+    font-family: mybody;
+}
+
+
+/* ================BLACKSCREEN================= */
+
+#blackscreen {
+    width: 100%;
+    height: 100%;
+    background-color: #1e402f;
+    position: fixed;
+    z-index: 1800;
+}
+
+
+/*-------------------------------------------HEADER-------------------------------------------*/
+
+#bgheader {
+    height: 60px;
+    background-color: #21bf73;
+    position: sticky;
+    top: 0px;
+    z-index: 2000;
+}
+
+#logoheader {
+    text-align: left;
+    line-height: 60px;
+}
+
+#naviheader {
+    text-align: center;
+}
+
+#naviheader ul {
+    list-style-type: none;
+}
+
+#naviheader ul li {
+    float: left;
+    line-height: 60px;
+}
+
+.iconheader ul li {
+    text-decoration: none;
+    list-style: none;
+    line-height: 60px;
+}
+
+.iconheader ul li a {
+    color: #f9fcfb;
+    float: right;
+    padding: 0 5px;
+    font-size: 20px;
+}
+
+.iconheader ul li a:hover {
+    color: #4e27a8;
+}
+
+hr {
+    background-color: #21bf73;
+}
+
+h2 {
+    color: #21bf73;
+    margin-top: 50px;
+}
+
+
+/* =====================NAVI================================ */
+
+#nav li {
+    list-style: none;
+    position: relative;
+    display: inline-block;
+}
+
+#nav .subnav {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background-color: #21bf73;
+    display: none;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav li a {
+    color: #f9fcfb;
+    text-decoration: none;
+    line-height: 60px;
+    padding: 0 10px;
+    display: inline-block;
+    font-size: 17px;
+    font-family: myheading;
+}
+
+#nav>li:hover>a,
+#nav.subnav li :hover a {
+    background-color: #f9fcfb;
+    color: #21bf73;
+}
+
+.subnav li {
+    width: 100%;
+}
+
+.subnav li:hover {
+    background-color: #00e0c7;
+    color: #21bf73;
+}
+
+.fa-caret-down {
+    font-size: 18px;
+}
+
+.navicon ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navicon a {
+    color: #f9fcfb;
+    font-size: 18px;
+    text-decoration: none;
+    float: right;
+    line-height: 60px;
+    padding: 0 5px;
+}
+
+.navicon a:hover {
+    color: #4e27a8;
+    transition: all ease 0.5s;
+}
+
+
+/* ======to top======  */
+
+#totop {
+    position: fixed;
+    z-index: 2001;
+    bottom: 20%;
+    right: 2%;
+    color: #21bf73;
+}
+
+#totop a i {
+    font-size: 30px;
+    color: #21bf73;
+}
+
+#totop i:hover {
+    transition: all ease 0.5s;
+    color: #4e27a8;
+}
+
+
+/* ===========================MOBILEHEADER================== */
+
+#bgmobileheader {
+    background-color: #21bf73;
+    height: 60px;
+}
+
+#mobilelogoheader {
+    text-align: left;
+    line-height: 60px;
+}
+
+#mobileiconheader a i {
+    color: #f9fcfb;
+    text-align: left;
+    display: block;
+    float: right;
+    line-height: 60px;
+    padding: 0 5px;
+}
+
+
+/*-------------------------------------------NAVI-------------------------------------------*/
+
+
+/* ===================navimobileheader==================== */
+
+#icon3lines {
+    padding: 0px;
+    margin-left: 10px;
+    float: right;
+    color: #f9fcfb;
+    line-height: 60px;
+}
+
+#iconsearchmobileheader {
+    padding: 0px;
+    margin-left: 10px;
+    float: right;
+    color: #f9fcfb;
+    line-height: 60px;
+}
+
+#navimobile {
+    background-color: #21bf73;
+    padding: 0px;
+    margin: 0px;
+    position: fixed;
+    z-index: 5004;
+    top: 60px;
+}
+
+#navimobile ul {
+    list-style-type: none;
+    display: block;
+    padding: 0px;
+    margin: 0px;
+}
+
+#navimobile ul li {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#navimobile ul li a {
+    color: #cecfca;
+    text-decoration: none;
+}
+
+.sidenav {
+    height: 40%;
+    width: 100%;
+    position: fixed;
+    z-index: 4001;
+    top: 0;
+    left: 0;
+    background-color: #21bf73;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a,
+.dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #f9fcfb;
+    display: block;
+    border-bottom: 1px solid #f9fcfb;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+
+/* On mouse-over */
+
+.sidenav a:hover,
+.dropdown-btn:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 200px;
+    font-size: 20px;
+    padding: 0px 10px;
+}
+
+.active {
+    background-color: #00e0c7;
+    color: #f9fcfb;
+}
+
+.dropdown-container {
+    display: none;
+    background-color: #21bf73;
+    padding-left: 8px;
+}
+
+.fa-plus {
+    float: right;
+    padding-top: 8px;
+    font-size: 15px;
+}
+
+
+/* =====================thamkhao==================== */
+
+.thamkhao {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 450px;
+}
+
+.thamkhao h5 a {
+    color: #21bf73;
+    text-decoration: none;
+}
+
+.thamkhao h5 a:hover {
+    color: #4e27a8;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.explorebtn1 a {
+    text-align: center;
+    color: #21bf73;
+    text-decoration: none;
+    padding: 5px 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid #21bf73;
+    background-color: #f9fcfb;
+}
+
+.explorebtn1 a:hover {
+    color: #f9fcfb;
+    background-color: #21bf73;
+    transition: all ease 0.5s;
+}
+
+
+/* --------------------------- BANCHAY------------------------ */
+
+h6,
+h5 {
+    text-align: center;
+    margin-top: 20px;
+    color: #21bf73;
+}
+
+.img2 {
+    background-color: #f9fcfb;
+    height: 530px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.shopping {
+    padding-right: 15px;
+    color: #21bf73;
+}
+
+.seemore {
+    padding-left: 15px;
+    color: #21bf73;
+}
+
+.box-center a {
+    text-decoration: none;
+    /* float: right; */
+}
+
+.box-center h6 {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #21bf73;
+    color: #f9fcfb;
+    background-color: #21bf73;
+}
+
+.box-center h6:hover {
+    color: #21bf73;
+    background-color: #f9fcfb;
+    transition: all ease 0.5s;
+}
+
+
+/* ======================SANPHAMMOI============== */
+
+.img3 {
+    background-color: #f9fcfb;
+    height: 530px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* ----------------------------------SHOPTOOL--------------------------- */
+
+.headings h2 {
+    margin-bottom: 40px;
+}
+
+.shoptool {
+    text-align: center;
+    padding-bottom: 10 30px;
+}
+
+.shoptool p {
+    line-height: 46px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+.shoptool p a {
+    text-decoration: none;
+    color: #21bf73;
+}
+
+.shoptool a i {
+    font-size: 50px;
+    color: #21bf73;
+}
+
+.shoptool p a:hover,
+.shoptool a i:hover {
+    transition: all ease 0.5s;
+    color: #4e27a8;
+}
+
+
+/* ---------------------- FOOTER ------------------------- */
+
+#bgfooter {
+    height: 400px;
+    color: #21bf73;
+    background-color: #f9fcfb;
+}
+
+#bgfooter2 {
+    height: 40px;
+    background-color: #21bf73;
+}
+
+#copyright ul li {
+    list-style: none;
+    color: #f9fcfb;
+    padding-top: 8px;
+    text-align: center;
+}
+
+.logo1 {
+    padding: 20px 0;
+}
+
+.info h4 {
+    padding-top: 20px;
+}
+
+.info ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.info ul li a {
+    color: #21bf73;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+.info ul li a:hover {
+    color: #4e27a8;
+    font-weight: bold;
+}
+
+#social,
+#payment {
+    margin-top: 10px;
+    list-style: none;
+    float: left;
+}
+
+#payment a,
+#social a {
+    font-size: 30px;
+    padding-right: 20px;
+    color: #21bf73;
+}
+
+#payment a:hover,
+#social a:hover {
+    transition: all ease 0.5s;
+    color: #4e27a8;
+}
+
+#emailfill {
+    width: 70%;
+    font-weight: 16px;
+    float: left;
+    height: 30px;
+    margin-top: 5px;
+    padding-left: 7px;
+    background-color: #f9fcfb;
+    border: 2px solid #21bf73;
+    color: #21bf73;
+    font-family: mybody;
+    border-radius: 20px 0px 0px 20px;
+}
+
+#email {
+    width: 30%;
+    font-weight: 16px;
+    float: right;
+    height: 30px;
+    margin-top: 5px;
+    padding-left: 7px;
+    border: none;
+    background-color: #21bf73;
+    color: #f9fcfb;
+    font-family: myheading;
+    border-radius: 0px 20px 20px 0px;
+}
+
+#email:hover {
+    transition: ease all 0.5s;
+    color: #f9fcfb;
+    background-color: #4e27a8;
+}
+
+
+/* ONLY X-LARGE */
+
+@media (min-width: 1200) {
+    /*-------------------------------------------HEADER-------------------------------------------*/
+    #bgheader {
+        height: 60px;
+        background-color: #21bf73;
+        position: sticky;
+        top: 0px;
+        z-index: 2000;
+    }
+    #logoheader {
+        text-align: left;
+        line-height: 60px;
+        padding: 5px 5px;
+        margin-top: 10px;
+    }
+    /*-------------------------------------------NAVI-------------------------------------------*/
+    #nav li {
+        list-style: none;
+        position: relative;
+        display: inline-block;
+    }
+    #nav .subnav {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        background-color: #21bf73;
+        display: none;
+    }
+    #nav li:hover .subnav {
+        display: block;
+    }
+    #nav li a {
+        color: #f9fcfb;
+        text-decoration: none;
+        line-height: 60px;
+        padding: 0 10px;
+        display: inline-block;
+        font-size: 17px;
+        font-family: myheading;
+    }
+    #nav>li:hover>a,
+    #nav.subnav li :hover a {
+        background-color: #f9fcfb;
+        color: #21bf73;
+    }
+    .subnav li {
+        width: 100%;
+    }
+    .subnav li:hover {
+        background-color: #00e0c7;
+        color: #21bf73;
+    }
+    .fa-caret-down {
+        font-size: 18px;
+    }
+    .navicon ul li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .navicon a {
+        color: #f9fcfb;
+        font-size: 20px;
+        text-decoration: none;
+        float: right;
+        line-height: 60px;
+        padding: 0 5px;
+    }
+    .navicon a:hover {
+        color: #4e27a8;
+        transition: all ease 0.5s;
+    }
+    /* ---------------------- FOOTER ------------------------- */
+    #bgfooter {
+        height: 400px;
+        color: #21bf73;
+        background-color: #f9fcfb;
+    }
+    #bgfooter2 {
+        height: 40px;
+        background-color: #21bf73;
+    }
+}
+
+
+/* ONLY LARGE */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /*-------------------------------------------HEADER-------------------------------------------*/
+    #bgheader {
+        height: 60px;
+        background-color: #21bf73;
+        position: sticky;
+        top: 0px;
+        z-index: 2000;
+    }
+    #logoheader {
+        text-align: left;
+        line-height: 60px;
+    }
+    /*-------------------------------------------NAVI-------------------------------------------*/
+    #nav li {
+        list-style: none;
+        position: relative;
+        display: inline-block;
+    }
+    #nav .subnav {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        background-color: #21bf73;
+        display: none;
+    }
+    #nav li:hover .subnav {
+        display: block;
+    }
+    #nav li a {
+        color: #f9fcfb;
+        text-decoration: none;
+        line-height: 60px;
+        padding: 0 10px;
+        display: inline-block;
+        font-size: 16px;
+        font-family: myheading;
+    }
+    #nav>li:hover>a,
+    #nav.subnav li :hover a {
+        background-color: #f9fcfb;
+        color: #21bf73;
+    }
+    .subnav li {
+        width: 100%;
+    }
+    .subnav li:hover {
+        background-color: #00e0c7;
+        color: #21bf73;
+    }
+    .fa-caret-down {
+        font-size: 16px;
+    }
+    .navicon ul li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .navicon a {
+        color: #f9fcfb;
+        font-size: 17px;
+        text-decoration: none;
+        float: right;
+        line-height: 60px;
+        padding: 0 5px;
+    }
+    .navicon a:hover {
+        color: #4e27a8;
+        transition: all ease 0.5s;
+    }
+    /* =================mobileheader==================== */
+    /* ===================navimobileheader==================== */
+    /* =====================thamkhao==================== */
+    .thamkhao {
+        height: 380px;
+    }
+    /* --------------------------- BANCHAY------------------------ */
+    .img2 {
+        height: 470px;
+    }
+    /* ======================SANPHAMMOI============== */
+    .img3 {
+        height: 470px;
+    }
+    /* =========================CACHANG======================== */
+    /* ------------------------------------TOOL--------------------------- */
+    /* ---------------------- FOOTER ------------------------- */
+    #bgfooter {
+        height: 400px;
+        color: #21bf73;
+        background-color: #f9fcfb;
+    }
+}
+
+
+/* ONLY MEDIUM  */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /*-------------------------------------------HEADER-------------------------------------------*/
+    #bgheader {
+        height: 60px;
+        background-color: #21bf73;
+        position: sticky;
+        top: 0px;
+        z-index: 2000;
+    }
+    #logoheader {
+        text-align: left;
+        line-height: 60px;
+    }
+    .iconheader ul li a {
+        color: #f9fcfb;
+        float: right;
+        padding: 0 2px;
+        font-size: 13px;
+    }
+    /*-------------------------------------------NAVI-------------------------------------------*/
+    #nav li {
+        list-style: none;
+        position: relative;
+        display: inline-block;
+    }
+    #nav .subnav {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        background-color: #21bf73;
+        display: none;
+    }
+    #nav li:hover .subnav {
+        display: block;
+    }
+    #nav li a {
+        color: #f9fcfb;
+        text-decoration: none;
+        line-height: 60px;
+        padding: 0 10px;
+        display: inline-block;
+        font-size: 13px;
+        font-family: myheading;
+    }
+    #nav>li:hover>a,
+    #nav.subnav li :hover a {
+        background-color: #f9fcfb;
+        color: #21bf73;
+    }
+    .subnav li {
+        width: 100%;
+    }
+    .subnav li:hover {
+        background-color: #00e0c7;
+        color: #21bf73;
+    }
+    .fa-caret-down {
+        font-size: 14px;
+    }
+    .navicon ul li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .navicon a {
+        color: #f9fcfb;
+        font-size: 14px;
+        text-decoration: none;
+        float: right;
+        line-height: 60px;
+        padding: 0 5px;
+    }
+    .navicon a:hover {
+        color: #4e27a8;
+        transition: all ease 0.5s;
+    }
+    /* =================mobileheader==================== */
+    /* ===================navimobileheader==================== */
+    /* =====================thamkhao==================== */
+    .thamkhao {
+        height: 300px;
+    }
+    /* --------------------------- BANCHAY------------------------ */
+    .img2 {
+        height: 390px;
+    }
+    /* ======================SANPHAMMOI============== */
+    .img3 {
+        height: 390px;
+    }
+    /* =========================CACHANG======================== */
+    .bigboss img {
+        max-width: 170px;
+    }
+    /* ------------------------------------TOOL--------------------------- */
+    /* ---------------------- FOOTER ------------------------- */
+    #bgfooter {
+        height: 400px;
+        color: #21bf73;
+        background-color: #f9fcfb;
+    }
+}
+
+
+/* ONLY SMALL */
+
+@media (min-width: 576px) and (max-width: 767px) {
+    /*-------------------------------------------HEADER-------------------------------------------*/
+    #bgheader {
+        height: 60px;
+        background-color: #21bf73;
+        position: sticky;
+        top: 0px;
+        z-index: 2000;
+        display: none;
+    }
+    #logoheader {
+        display: none;
+    }
+    .iconheader {
+        display: none;
+    }
+    .iconheader ul li a {
+        font-size: 12px;
+    }
+    /*-------------------------------------------NAVI-------------------------------------------*/
+    .navigation {
+        display: none;
+    }
+    /* =================mobileheader==================== */
+    /* ===================navimobileheader==================== */
+    /* =====================thamkhao==================== */
+    .thamkhao {
+        height: 245px;
+    }
+    /* --------------------------- BANCHAY------------------------ */
+    .img2 {
+        height: 350px;
+    }
+    /* ======================SANPHAMMOI============== */
+    .img3 {
+        height: 350px;
+    }
+    /* =========================CACHANG======================== */
+    .bigboss img {
+        max-width: 130px;
+    }
+    /* ------------------------------------TOOL--------------------------- */
+    /* ---------------------- FOOTER ------------------------- */
+    #bgfooter {
+        height: 400px;
+        color: #21bf73;
+        background-color: #f9fcfb;
+    }
+    #payment a,
+    #social a {
+        font-size: 20px;
+        padding-right: 20px;
+        color: #21bf73;
+    }
+}
+
+
+/* ONLY X-SMALL */
+
+@media (max-width: 575px) {
+    /*-------------------------------------------HEADER-------------------------------------------*/
+    #bgheader {
+        height: 60px;
+        background-color: #21bf73;
+        position: sticky;
+        top: 0px;
+        z-index: 2000;
+        display: none;
+    }
+    #logoheader {
+        display: none;
+    }
+    .iconheader {
+        display: none;
+    }
+    /*-------------------------------------------NAVI-------------------------------------------*/
+    .navigation {
+        display: none;
+    }
+    /* =================mobileheader==================== */
+    .iconsearchmobileheader i:hover {
+        color: #4e27a8;
+        font-weight: bold;
+    }
+    /* ===================navimobileheader==================== */
+    /* =====================thamkhao==================== */
+    .thamkhao img {
+        max-width: 350px;
+    }
+    /* --------------------------- BANCHAY------------------------ */
+    /* ======================SANPHAMMOI============== */
+    /* =========================CACHANG======================== */
+    .bigboss img {
+        max-width: 100px;
+    }
+    /* ------------------------------------TOOL--------------------------- */
+    .shoptool {
+        text-align: center;
+        padding-bottom: 10 30px;
+    }
+    .shoptool p {
+        line-height: 46px;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 0 20px;
+    }
+    .shoptool p a {
+        text-decoration: none;
+        color: #21bf73;
+    }
+    .shoptool a i {
+        font-size: 40px;
+        color: #21bf73;
+    }
+    .shoptool p a:hover,
+    .shoptool a i:hover {
+        transition: all ease 0.5s;
+        color: #4e27a8;
+    }
+    /* ---------------------- FOOTER ------------------------- */
+    #bgfooter {
+        height: 400px;
+        color: #21bf73;
+        background-color: #f9fcfb;
+    }
+    #payment a,
+    #social a {
+        font-size: 20px;
+        padding-right: 10px;
+        color: #21bf73;
+    }
+}
